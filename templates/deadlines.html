@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <!-- Responsive Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Website Title -->
+    <title>ACU Mate - Admin panel</title>
+    <!-- Meta Tags -->
+    <meta name="keywords" content="">
+    <meta name="author" content="Abdelrahman Mohsen">
+    <meta name="description" content="Startups">
+    <!-- Stylesheets -->
+    <link href="../assets/css/normalize.css" rel="stylesheet" type="text/css">
+    <!-- Normalize Stylesheet -->
+    <link href="../assets/css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- Jquery UI Stylesheet -->
+    <link href="../assets/css/main.css" rel="stylesheet" type="text/css">
+    <!-- Materialize Compiled and minified CSS -->
+    <link href="../assets/css/material.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link href="../assets/css/responsive.css" rel="stylesheet" type="text/css">
+    <!-- Responsive Stylesheet -->
+    <link href="../assets/css/animate.css" rel="stylesheet" type="text/css">
+    <!-- FontAwesome Compiled and minified CSS -->
+    <link rel="stylesheet" href="/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Web Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
+    <!-- End Web Fonts -->
+    <!-- Favicon -->
+    <link href="../assets/img/favicon.png" rel="icon" type="image/x-icon" />
+    <!--IE compatibility-->
+    <!--[if lte IE 8]>
+    <script src="http://js.cwhcode.com/html5/"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <link href="css/style_IE.css" rel="stylesheet" type="text/css">
+    <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+      document.createElement('hgroup');
+    </script>
+    <![endif]-->
+    <!-- JS Plugins -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- Import Jquery -->
+    <!-- preloader -->
+    <script src="../assets/js/loader.js"></script>
+    <!-- Materialize Compiled and minified JavaScript -->
+    <script src="../assets/js/material.min.js"></script>
+  </head>
+<body>
+<div class="progress">
+    <div class="indeterminate"></div>
+</div>
+<aside id="leftFixedNav">
+  <img class="logo" src="../assets/imgs/logo.png" alt="ACU_LOGO">
+  <div class="nav-container">
+    <div class="nav-wrapper">
+      <a class="dropdown-button btn" href="#!" data-activates="dropdown1">Select <i class="material-icons right">arrow_drop_down</i></a>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="../index.html">Setup Courses</a></li>
+        <li class="divider"></li>
+        <li><a href="schedules.html">Setup Schedules</a></li>
+        <li class="divider"></li>
+        <li><a href="exams.html">Setup Exams</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Setup Deadlines</a></li>
+        <li class="divider"></li>
+        <li><a href="examGrades.html">Set Exam Grades</a></li>
+        <li class="divider"></li>
+        <li><a href="deadlineGrades.html">Set Deadline Grades</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Manage Sheets</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Notifications</a></li>
+        <li class="divider"></li>
+        <li><a href="polls.html">Polls</a></li>
+      </ul>
+    </div>
+    <form action="login.php">
+    <div class="input-field">
+      <input id="password" type="password" class="validate" placeholder=" Admin pass">
+    </div>
+    <button class="waves-effect waves-light btn">Login</button>
+    </form>
+  </div>
+</aside>
+<section class="contentContainer setCourses z-depth-1">
+  <form action="">
+  <h1 class="title">Setup Deadlines</h1>
+  <div class="row">
+    <div class="input-field col s3">
+      <select>
+        <option value="" disabled selected>Select Level</option>
+        <option value="1">Level 1</option>
+        <option value="2">Level 2</option>
+        <option value="3">Level 3</option>
+        <option value="4">Level 4</option>
+        <option value="5">Level 5</option>
+        <option value="6">Level 6</option>
+      </select>
+    </div>
+    <div class="input-field col s5">
+      <select>
+        <option value="" disabled selected>No courses available</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <input type="text" id="exam_title" class="validate">
+      <label for="exam_title">Title</label>
+    </div>
+    <div class="input-field col s3">
+          <input type="date" id="deadline" class="datepicker">
+          <label for="deadline">Deadline</label>
+    </div>
+  </div>
+   <div class="row">
+    <div class="input-field col s3">
+      <select>
+        <option  disabled selected>Type</option>
+        <option value="assignment">Assignment</option>
+        <option value="research">Research</option>
+        <option value="project">Project</option>
+      </select>
+    </div>
+    <div class="input-field col s6">
+      <select>
+        <option selected value="main">Submission</option>
+        <option value="upload">Upload</option>
+        <option value="deskSubmission">Desk Submission</option>
+        <option value="discussion">Discussion</option>
+      </select>
+    </div>
+    <div class="input-field col s2">
+      <input type="number" id="fall_mark" class="validate">
+      <label for="fall_mark">Fall mark</label>
+    </div>
+  </div>
+  <div class="row">
+        <div class="input-field col s12">
+          <textarea id="details" class="materialize-textarea"></textarea>
+          <label for="details">Details</label>
+        </div>
+  </div>
+  <button class="btn waves-effect waves-light right" id="submitBtn" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+  </form>
+</section>
+</body>
+<script>
+  $(document).ready(function() {
+    $('select').material_select();
+    $('.datepicker').pickadate({
+    selectMonths: true, 
+    selectYears: 15 
+  });
+  });
+</script>
+</html>
